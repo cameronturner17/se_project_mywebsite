@@ -1,49 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Tech Projects</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <header>
-            <h1>My Projects</h1>
-        </header>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Around the US </h3>
-                <p>Around the US is a website were users can upload photos of there travels.
-                    In this project I used HTML and CSS for the structure and I jused JavaScript to create fuctionality.
-                </p>
-                <a href="https://cameronturner17.github.io/se_project_aroundtheus/" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Triple Peaks Coffee Shop </h3>
-                <p>This is a landing page I created for the Triple Peaks Coffee shop.
-                    This is the second project I made during my studies at Triple Ten.
-                    I incorporated fundamentals such as flexbox and BEM structure to complete this project.
-                </p>
-                <a href="https://cameronturner17.github.io/se_project_coffeeshop/" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Triple Peaks Library </h3>
-                <p>The Triple Peaks Library webpage is the first project in the Software Engineering program at TripleTen. It was created using basic HTML and CSS properties.</p>
-                <a href="https://cameronturner17.github.io/se_project_library/" target="_blank">View Project</a>
-            </div>
-        </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Motivated and detail-oriented Junior Software Engineer with experience in designing, coding, and testing software applications. Passionate about developing efficient and scalable solutions, collaborating with teams, and continuously learning to enhance technical skills. Seeking an opportunity to contribute to innovative projects and grow as a professional.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="camerontturner1@gmail.com">camerontturner1@gmail.com</a></p>
-            <p>Github: <a href="https://github.com/cameronturner17">cameronturner17</a></p>
-        </section>
-        <footer>
-            &copy; 2025 My Portfolio
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron Turner | Software Engineer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #1e293b;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            color: #cbd5e1;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        nav a {
+            margin: 0 0.75rem;
+            color: #334155;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+            padding: 1rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            border-bottom: 2px solid #94a3b8;
+            padding-bottom: 0.25rem;
+        }
+
+        .project {
+            margin-bottom: 1.5rem;
+        }
+
+        .project h3 {
+            color: #0f172a;
+            font-size: 1.25rem;
+        }
+
+        .project p {
+            margin: 0.5rem 0;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #2563eb;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .project a:hover {
+            background-color: #2563eb;
+            color: #fff;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            background-color: #e2e8f0;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        #contact a {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .resume-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .resume-button:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cameron Turner</h1>
+        <p>Junior Software Engineer | Web Developer</p>
+    </header>
+    <nav>
+        <a href="#projects">Projects</a> |
+        <a href="#about">About</a> |
+        <a href="#skills">Skills</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Around the US</h3>
+            <p>A dynamic web application that allows users to upload and share photos from their travels. Built using HTML and CSS for structure and styling, with JavaScript enabling interactive features and real-time content updates.</p>
+            <a href="https://cameronturner17.github.io/se_project_aroundtheus/" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Triple Peaks Coffee Shop</h3>
+            <p>A visually engaging landing page designed for a fictional coffee shop. Developed using HTML and CSS, this project showcases proficiency in responsive layout techniques, Flexbox, and the BEM (Block Element Modifier) methodology.</p>
+            <a href="https://cameronturner17.github.io/se_project_coffeeshop/" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Triple Peaks Library</h3>
+            <p>An introductory project focused on semantic HTML and CSS fundamentals. This static webpage for a fictional library demonstrates basic web layout design and content structure using best practices in front-end development.</p>
+            <a href="https://cameronturner17.github.io/se_project_library/" target="_blank">View Project</a>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Motivated and detail-oriented Junior Software Engineer with experience in designing, coding, and testing software applications. Passionate about developing efficient and scalable solutions, collaborating with teams, and continuously learning to enhance technical skills. Seeking an opportunity to contribute to innovative projects and grow as a professional.</p>
+        <a class="resume-button" href="/mnt/data/Cameron_Turner_resume_styled_3.docx" download>Download My Resume</a>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills">
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Git</li>
+            <li>React</li>
+            <li>Node.js (in progress)</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:camerontturner1@gmail.com">camerontturner1@gmail.com</a></p>
+        <p>Github: <a href="https://github.com/cameronturner17">cameronturner17</a></p>
+    </section>
+    <footer>
+        &copy; 2025 Cameron Turner Portfolio
+    </footer>
+</body>
 </html>
